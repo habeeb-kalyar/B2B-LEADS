@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habib Data Labs - Search Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habib Data Labs - Data Request Form</h1>
+        </header>
+        <form id="scraperForm">
+            <fieldset>
+                <legend class="legend-required-details">Required Details:</legend>
+                <label for="location">Location(s) to search(Comma separated values):</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="businessType">Business type to search:</label>
+                <input type="text" id="businessType" name="businessType" required>
+                
+                <label for="companyName">Your company name (optional):</label>
+                <input type="text" id="companyName" name="companyName">
+                
+                <label for="userEmail">Your email:</label>
+                <input type="email" id="userEmail" name="userEmail" required>
+                
+                <label for="userContact">Your contact number (optional):</label>
+                <input type="text" id="userContact" name="userContact">
+                
+                <label for="leadsRequired">Number of leads required:</label>
+                <input type="number" id="leadsRequired" name="leadsRequired" required>
+                
+                <label for="mustHaveColumns">Must-have column names (comma-separated):</label>
+                <input type="text" id="mustHaveColumns" name="mustHaveColumns">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Select source(s) to be searched:</legend>
+                <label><input type="checkbox" name="sources" value="Google Maps"> Google Maps</label>
+                <label><input type="checkbox" name="sources" value="Business Website"> Business Website</label>
+                <label><input type="checkbox" name="sources" value="Yelp"> Yelp</label>
+                <label><input type="checkbox" name="sources" value="Facebook"> Facebook</label>
+                <label><input type="checkbox" name="sources" value="Linkedin"> Linkedin</label>
+                <label><input type="checkbox" name="sources" value="Sales Navigator"> Sales Navigator</label>
+            </fieldset>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="totalCost"></div>
+        <div id="successMessage" style="display:none; margin-top:20px; color: green;"></div>
+        <div class="badge">
+            <a href="https://www.fiverr.com/habeeb_kalyar" rel="nofollow" target="_blank">
+                habeeb_kalyar @ Fiverr
+            </a>
+        </div>
+    </div>
+    <footer>
+        Contact: +923060070762 | Email: habeebkalyar@gmail.com | @Habib Data Labs
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
